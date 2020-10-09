@@ -11,7 +11,7 @@ $.ajaxPrefilter(function(params) {
     }
     //3.拦截所有响应，判断身份认证信息
     params.complete = function(res) {
-        console.log(res.responseJSON);
+
         var obj = res.responseJSON;
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败') {
             localStorage.removeItem('token');
