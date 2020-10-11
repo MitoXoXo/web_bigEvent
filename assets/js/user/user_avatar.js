@@ -47,6 +47,7 @@ $(function() {
                 avatar: dataURL
             },
             success: function(res) {
+                console.log(res);
                 if (res.status !== 0) {
                     return layer.msg(res.message);
                 }
